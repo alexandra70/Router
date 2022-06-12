@@ -5,8 +5,6 @@
 
 Impementare:
 
-    Am implementat toate cerintele in afara de BONUS.
-
     Pornesc de la rezolvarea laboratorului 4.
     Incep prin a popula tabela de rutare cu datele citite din fisier.
     Procesul de forwarding:
@@ -68,21 +66,3 @@ Altele:
     Am folosit qsort pentru sortare tabelei de rutare, exact ca aici:
     https://www.geeksforgeeks.org/comparator-function-of-qsort-in-c/
     Am flosit strucutra laboratorului 4.
-
-    Probleme:
-    Nu alocam sufuiciente elemente pentru tabela de rutare, am rezolvat cu cateva printf-uri.
-    Am inca probleme la qsort.
-    Am avut probleme la router_arp_request si forward, imi alterneaza testele, daca fac partea de
-    router_arp_request fara structuri noi mergea partea de forward, dar nu merge router_arp_request.
-
-    Nu reuseam sa fac sa treaca testele icmp_timeout si host_unreachable cu toate ca pachetul trimis arata 
-    cum trebuia si faceam in ac stil cum faceam si router_icmp),nu mergea. Am rezolvat prin a face noi structuri
-    si transfera de ce am nevoie in ele din pachetul primit si completa in plus ce mai era nevoie. Nu am resuit 
-    sa trimit pachetul initial modificat, probabil nu curatam toate campurile care poate interferau.
-
-    Trimiteam toate pachetele pe interfata pe care veneau. Am rezolvat prin printarea pachetelor si verificarea
-    lor ulterioara. Au fost utile fisierele cu capturi pachete.
-
-    Nu copletam toate campurile de care aveam nevoie in headere cum trebuie(precum arp care nu merge 
-    daca nu are campurile care indica lungimiele adresei de protocol sau cea hardware corect). Am reozlvat prin
-    a ma uita in fisierele de err.txt.
